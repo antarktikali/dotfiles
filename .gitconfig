@@ -1,0 +1,25 @@
+[user]
+  name = "Şan Güneş"
+  email = "545021+antarktikali@users.noreply.github.com"
+
+[alias]
+  logadog = log --all --decorate --oneline --graph
+  chardiff = diff --word-diff=color --word-diff-regex=.
+
+[pull]
+  rebase = true
+
+[diff]
+  tool = meld
+
+[merge]
+  tool = meld
+
+[mergetool "meld"]
+  # Depending on the situation, one of the below might be prefered
+  #cmd = meld "$LOCAL" "$MERGED" "$REMOTE" --output "$MERGED"
+  cmd = meld "$LOCAL" "$BASE" "$REMOTE" --output "$MERGED"
+
+[init]
+  defaultBranch = trunk
+
